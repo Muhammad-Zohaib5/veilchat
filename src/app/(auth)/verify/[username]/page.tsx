@@ -28,7 +28,9 @@ const VerifyAccount = () => {
                     username: params.username,
                     code: data.code
                 })
-                router.replace('sign-in')
+                // router.replace('sign-in')
+                
+                router.replace('/dashboard')
 
                 toast.success(`Success\n${response.data.message}`)
 
@@ -79,3 +81,6 @@ const VerifyAccount = () => {
 }
 
 export default VerifyAccount
+
+
+

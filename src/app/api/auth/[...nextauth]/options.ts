@@ -28,7 +28,7 @@ export const authOptions: NextAuthOptions ={
                         throw new Error('No user found with this email')
                     }
 
-                    if(!user.isVarified){
+                    if(!user.isVerified){
                         throw new Error('Please varify your account before Login')
                     }
                     const isPasswordCorrect = await bcrypt.compare(credentials.password,user.password)
@@ -81,3 +81,4 @@ export const authOptions: NextAuthOptions ={
     secret: process.env.NEXTAUTH_SECRET,
 
 }
+
